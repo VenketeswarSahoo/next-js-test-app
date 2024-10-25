@@ -5,7 +5,7 @@ export async function GET() {
   try {
     const response = await axios.get(
       `https://pro.ip-api.com/json/?fields=61439&key=${process.env
-        .IP_TRACK_KEY}`
+        .NEXT_PUBLIC_IP_TRACK_KEY}`
     );
     return NextResponse.json(response.data);
   } catch (error) {
