@@ -7,10 +7,7 @@ export async function GET() {
       `https://pro.ip-api.com/json/?fields=61439&key=${process.env
         .IP_TRACK_KEY}`
     );
-    return NextResponse.json({
-      country: response.data.country,
-      countryCode: response.data.countryCode
-    });
+    return NextResponse.json(response.data);
   } catch (error) {
     return NextResponse.json(
       { error: "Failed to fetch country data" },
