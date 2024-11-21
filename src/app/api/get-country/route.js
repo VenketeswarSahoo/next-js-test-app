@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import axios from "axios";
 
 export async function GET() {
+  console.log(process.env.NEXT_PUBLIC_IP_TRACK_KEY);
   try {
     const response = await axios.get(
       `https://pro.ip-api.com/json/?fields=61439&key=${process.env
