@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 const page = () => {
   const [data, setData] = useState({});
   useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_IP_TRACK_KEY);
+
     axios
       .get("/api/get-country") // Call to your internal API route
       .then(res => {
